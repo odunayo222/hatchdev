@@ -47,18 +47,3 @@
   return arr;
 }
 
-// merge sort
-//  function mergeSort(arr: number[]): number[] {
-//   if (arr.length <= 1) {
-//     return arr;
-//   }
-//   let mid = Math.floor(arr.length / 2);
-//   let left = arr.slice(0, mid);
-//   let right = arr.slice(mid);
-//   return merge(mergeSort(left), mergeSort(right));
-// }
-
-// function merge(arg0: number[], arg1: number[]): number[] {
-//     throw new Error("Function not implcemented.");
-// }
-// console.log(mergeSort([5, 3, 8, 4, 2, 7, 1, 6]));

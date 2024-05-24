@@ -52,7 +52,7 @@ class TaskManager {
 
         let current = this.head;
         while (current.next !== null) {
-            if (current.next.task.id === taskId) {
+            if (current.next!.task.id === taskId) {
                 current.next = current.next.next;
                 return;
             }
@@ -64,22 +64,22 @@ class TaskManager {
     displayTasks() {
         console.log("Tasks in Array:");
         this.tasksArray.forEach(task => {
-            console.log(ID: ${task.id}, Name: ${task.name}, Description: ${task.description});
+            console.log(`ID: ${task.id}, Name: ${task.name}, Description: ${task.description}`);
         });
 
         console.log("\nTasks in Linked List:");
         let current = this.head;
         while (current !== null) {
-            console.log(ID: ${current.task.id}, Name: ${current.task.name}, Description: ${current.task.description});
+            console.log(`ID: ${current.task.id}, Name: ${current.task.name}, Description: ${current.task.description}`);
             current = current.next;
         }
     }
 }
 
-// Example usage:
+
 const taskManager = new TaskManager();
-taskManager.addTask({ id: 1, name: "Task 1", description: "Description 1" });
-taskManager.addTask({ id: 2, name: "Task 2", description: "Description 2" });
+taskManager.addTask({ id: 1, name: "Study Calculus", description: "Read about functions and limits" });
+taskManager.addTask({ id: 2, name: "Eat Lunch", description: "Buy Korede spaghetti" });
 taskManager.displayTasks();
 taskManager.deleteTask(1);
 taskManager.displayTasks();
